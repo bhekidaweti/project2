@@ -21,6 +21,7 @@
         <div class="card-body">
             <h5 class="card-title">{{ listing.title }}</h5>
             <p class="card-text">{{ listing.description}}</p>
+            <h7>Current price :R {{ listing.price.bid }} </h7> 
             <a href="{% url 'listing' id=listing.id %}" class="btn btn-primary"> Show details...</a>
         </div>
     </div>
