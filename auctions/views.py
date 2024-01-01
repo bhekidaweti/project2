@@ -32,7 +32,7 @@ def closeAuction(request, id):
         "allComments": allComments,
         "isOwner" : isOwner,
         "update": True,
-        "message": "Your auctions is closed!"
+        "message": "Your auction is closed!"
     })
 
 

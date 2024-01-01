@@ -6,6 +6,7 @@
     {% csrf_token %}
     <label for="category">Select category</label>
         <select name="category" id="category">
+            <option value="" selected disabled>Select an option</option>
             {% for category in categories %}
                 <option value="{{ category }}">{{ category }}</option>
             {% endfor %}

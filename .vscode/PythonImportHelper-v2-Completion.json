@@ -170,6 +170,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -429,6 +445,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "auctions.migrations.0008_alter_listing_imageurl",
+        "description": "auctions.migrations.0008_alter_listing_imageurl",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('auctions', '0007_comment_timestamp'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='listing',\n            name='imageURL',\n            field=models.CharField(blank=True, max_length=1000, null=True),\n        ),",
+        "detail": "auctions.migrations.0008_alter_listing_imageurl",
+        "documentation": {}
+    },
+    {
         "label": "app_config",
         "kind": 5,
         "importPath": "auctions.admin",
@@ -478,7 +503,7 @@
         "kind": 6,
         "importPath": "auctions.models",
         "description": "auctions.models",
-        "peekOfCode": "class Bid(models.Model):\n    bid = models.IntegerField(default=0)\n    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name=\"userBid\")\nclass Listing(models.Model):\n    title = models.CharField(max_length=20)\n    description = models.CharField(max_length= 400)\n    imageURL = models.CharField(max_length=2000, null=True, blank=True)\n    price = models.ForeignKey(Bid, on_delete=models.CASCADE, blank=True, null=True, related_name=\"bidPrice\")\n    isActive = models.BooleanField(default=True)\n    owner = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name=\"userComments\")",
+        "peekOfCode": "class Bid(models.Model):\n    bid = models.IntegerField(default=0)\n    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name=\"userBid\")\nclass Listing(models.Model):\n    title = models.CharField(max_length=20)\n    description = models.CharField(max_length= 400)\n    imageURL = models.CharField(max_length=1000, null=True, blank=True)\n    price = models.ForeignKey(Bid, on_delete=models.CASCADE, blank=True, null=True, related_name=\"bidPrice\")\n    isActive = models.BooleanField(default=True)\n    owner = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name=\"userComments\")",
         "detail": "auctions.models",
         "documentation": {}
     },
@@ -487,7 +512,7 @@
         "kind": 6,
         "importPath": "auctions.models",
         "description": "auctions.models",
-        "peekOfCode": "class Listing(models.Model):\n    title = models.CharField(max_length=20)\n    description = models.CharField(max_length= 400)\n    imageURL = models.CharField(max_length=2000, null=True, blank=True)\n    price = models.ForeignKey(Bid, on_delete=models.CASCADE, blank=True, null=True, related_name=\"bidPrice\")\n    isActive = models.BooleanField(default=True)\n    owner = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name=\"userComments\")\n    category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True, related_name=\"category\")\n    watchlist = models.ManyToManyField(User, blank=True, null=True, related_name=\"listingWatchlist\")\n    def __str__(self):",
+        "peekOfCode": "class Listing(models.Model):\n    title = models.CharField(max_length=20)\n    description = models.CharField(max_length= 400)\n    imageURL = models.CharField(max_length=1000, null=True, blank=True)\n    price = models.ForeignKey(Bid, on_delete=models.CASCADE, blank=True, null=True, related_name=\"bidPrice\")\n    isActive = models.BooleanField(default=True)\n    owner = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name=\"userComments\")\n    category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True, related_name=\"category\")\n    watchlist = models.ManyToManyField(User, blank=True, null=True, related_name=\"listingWatchlist\")\n    def __str__(self):",
         "detail": "auctions.models",
         "documentation": {}
     },
